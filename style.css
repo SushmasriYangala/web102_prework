@@ -6,7 +6,7 @@ body {
 }
 
 #tentacles {
-    width: 50px;
+    width: 60px;
 }
 
 .header {
@@ -21,6 +21,12 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -40,12 +46,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    cursor: pointer;
+}
+
+.game-img:hover{
+    box-shadow: 0 0 30px lightblue;
+    transform: scale(1.1);
 }
 
 .game-img {
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px #FFFFFF;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 30px;
 }
 
 .game-card {
@@ -67,9 +82,70 @@ body {
 }
 
 button {
+    text-decoration: none;
+    background-color: transparent;
+    border:2px solid lightblue;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-family: roboto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: transparent;
+    color:lightblue;
+}
+
+input:hover {
+    box-shadow: 0 0 30px lightblue;
+}
+
+.search-form{
     font-family: 'Cabin';
-    border: none;
+    background-color: whitesmoke;
+    border:2px solid lightblue;
     padding: 1%;
     margin: 1%;
-    border-radius: 7px;
+    border-radius: 30px;
+}
+
+#main-nav {
+  color: #084012;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  height: 45px;
+}
+
+nav a {
+  color: rgb(12, 12, 12);
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+  border:2px solid lightblue;
+}
+
+nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
+nav a:hover {
+  box-shadow: 0 0 30px lightblue;
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
